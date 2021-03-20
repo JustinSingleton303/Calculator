@@ -11,8 +11,8 @@ app.get('/', (req, res) =>{
 });
 
 app.post('/', (req, res) =>{
-  var num1 = req.body.num1;
-  var num2 = req.body.num2;
+  var num1 = parseInt(req.body.num1);
+  var num2 = parseInt(req.body.num2);
   var sum = num1 + num2;
   res.send("The result is" + sum);
 });
