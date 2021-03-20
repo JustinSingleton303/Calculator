@@ -11,8 +11,10 @@ app.get('/', (req, res) =>{
 });
 
 app.post('/', (req, res) =>{
-  console.log(req.body);
-  res.send("Post posted");
+  var num1 = req.body.num1;
+  var num2 = req.body.num2;
+  var sum = num1 + num2;
+  res.send("The result is" + sum);
 });
 
 app.listen(port, ()=>{
